@@ -1,0 +1,292 @@
+.body {
+  margin: 0;
+  background-color: #16181d;  /*color de fondo de la página*/
+  color: white;  /*color del texto de la página*/
+  font-family: monospace;
+}
+
+.header {
+  /*estilos para la cabecera*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: #00000080; */
+  background-color: #7e7b7b80;
+  box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);
+}
+
+.nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container {
+  max-width: 1024px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: auto;
+}
+
+.img {
+  display: block;
+}
+
+.img--logo {
+  /*estilos del logo*/
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.img--hero {
+  /*asignando estilo a la imagen*/
+  width: 256px;
+  height: 256px;
+
+  /*para que este redondito la imagen usamos border radius*/
+  border-radius: 50%;
+
+  /*para darle otra forma a la imagen*/
+  /*border-radius: 0 0 50% 50%;*/
+
+  /*para darle sombra a nuestra imagen*/
+  /* box-shadow: -0.25rem -0.25rem 1rem 0.25rem #149eca, 0.25rem 5px 1rem 0.25rem #388f7f; */
+  /* box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(0, 90, 255, 0.8), 0.25rem 5px 1rem 0.25rem rgba(0, 213, 83, 0.8); */
+
+  box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(0, 90, 255, 0.8); 
+	-webkit-box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(0, 90, 255, 0.8); 
+	-moz-box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(0, 90, 255, 0.8);
+}
+
+@media (min-width: 768px) {
+  .img--hero {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.25s color;
+}
+
+.link:hover {
+  /*estilos a las etiquetas al costado del icono*/
+  /* color: #149eca; */
+  color: #01FFFF;
+}
+
+.hero {
+  /*para dar estilos a la clase article*/
+  min-height: 100vh;
+  background-image: linear-gradient(#00000080, #00000080), url('https://i.postimg.cc/8zxJNzym/wp-49.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 512px;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.card__body h1 {
+  color: #0b99f8;
+}
+
+.card__body p {
+  color: white;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card__title--lg {
+  font-size: 1.5rem;
+}
+
+.card__text {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .card__body {
+    gap: 1rem;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .card__title--lg {
+    font-size: 1.75rem;
+  }
+
+  .card__text {
+    font-size: 1rem;
+  }
+}
+
+.icon {
+  /*dándole estilos a los iconos*/
+  display: flex;
+  font-size: 1.5rem;
+  /* color: rgb(35, 247, 52); */
+  color: #0b99f8;
+  text-decoration: none;
+}
+
+.icon i {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+
+.button {
+  display: flex;
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 1rem;
+  background-color: #0b99f8;
+  color: white;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.25s, filter 0.25s;
+}
+
+.button:hover {
+  /*dando estilos al botón Desargar CV cuando se pase el mouse por botón*/
+  box-shadow:
+    0 0 0.125rem 0.0625rem #149eca,
+    0 0 0.25rem 0.125rem #149eca;
+  filter: brightness(1.125);
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 1rem;
+  }
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flexbox--header {
+  align-items: center;  /*alinea de forma vertical*/
+  justify-content: space-between;  /*coloca espacios iguales entre los hijos*/
+}
+
+.g-layout {
+  display: grid;  /*para definir las grillas*/
+}
+
+.g-layout--1-1 {
+  grid-template-columns: 1fr;  /*1fr indica cuantas columnas se quiere tener, con grid-template-columns especificamos las columnas*/
+}
+
+.g-layout--center {
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .g-layout--1-1 {
+    grid-template-columns: 1fr 1fr;  /*1fr 1fr indica dos columnas*/
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-xs {
+  gap: 1rem;
+}
+
+.gap-sm {
+  gap: 1.5rem;
+}
+
+.gap-md {
+  gap: 2rem;
+}
+
+.color-primary {
+  /*para asignarle el color neón al span*/
+  /* color: #149eca; */
+  /* color: #ffffff;
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa; */
+  
+  /* color: #149eca; */
+  color: #ffffff;
+  animation: glow 1s ease-in-out infinite alternate;  /*para darle animación al span*/
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #06d4f8,
+    0 0 20px #06d4f8,
+    0 0 25px #06d4f8,
+    0 0 30px #06d4f8,
+    0 0 35px #06d4f8;
+  }
+  to {
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #06d4f8,
+    0 0 40px #06d4f8,
+    0 0 50px #06d4f8,
+    0 0 60px #06d4f8,
+    0 0 70px #06d4f8;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md\:d-block {
+    display: block;
+  }
+}
