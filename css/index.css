@@ -9,6 +9,7 @@
   background-color: var(--primary-background-color);  /*color de fondo de la página*/
   color: var(--primary-text-color);  /*color del texto de la página*/
   font-family: var(--primary-font-family);
+  overflow: hidden;
 }
 
 .section {
