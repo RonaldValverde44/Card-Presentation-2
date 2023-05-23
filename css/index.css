@@ -61,14 +61,14 @@
 }
 
 .list--menu {
-  opacity: 0;  /*se puso delante de todo y no deja inter actuar con lo demás*/
-  pointer-events: none;  /*para que nos deje interactuar con lo demás que está en la página*/
   position: fixed;
   top: 80px;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--light-primary-shadow-color);
+  opacity: 0;  /*se puso delante de todo y no deja inter actuar con lo demás*/
+  pointer-events: none;  /*para que nos deje interactuar con lo demás que está en la página*/
   transition: opacity 0.25s;
 }
 
@@ -83,9 +83,9 @@
 
 .link {
   color: white;
-  text-decoration: none;
   font-size: 1rem;
   font-weight: 700;
+  text-decoration: none;
   transition: 0.25s color;
 }
 
