@@ -1,0 +1,26 @@
+.g-layout {
+  display: grid;  /*para definir las grillas*/
+}
+
+.g-layout--1-1 {
+  grid-template-columns: 1fr;  /*1fr indica cuantas columnas se quiere tener, con grid-template-columns especificamos las columnas*/
+}
+
+.g-layout--1-1-1 {
+  grid-template-columns: 1fr;
+}
+
+.g-layout--center {
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .g-layout--1-1 {
+    grid-template-columns: 1fr 1fr;  /*1fr 1fr indica dos columnas*/
+  }
+
+  .g-layout--1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

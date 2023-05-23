@@ -1,0 +1,15 @@
+.hero {
+  /*para dar estilos a la clase article*/
+  min-height: 100vh;
+  background-image: url('https://i.postimg.cc/8zxJNzym/wp-49.jpg');  /*color de fondo*/
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+}
